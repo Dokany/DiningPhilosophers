@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <unistd.h>             /* Needed for system time and sleep based operations */
 
-#define max_block 45            /* Maximum tolerable block duration for a philosopher */
+#define max_block 5            /* Maximum tolerable block duration for a philosopher */
 
 
 enum {THINKING, HUNGRY, EATING} phil_state[5];          /* Philosopher states */
@@ -51,16 +51,21 @@ int main (void)
 
 void initializing_phil()
 {
+    pthread_mutex_init(&mutex_forks, NULL);      /* Initializing mutex_forks lock */
+    pthread_mutex_init(&mutex_block, NULL);      /* Initializing mutex_block lock */
+
     for (int i = 0; i < 5; ++i)
     {
         pthread_create(&phil[i], NULL, dining_phil, (void *) &i);           /* Creating the philosopher threads and linking each thread to the void dining_phil function that handles their operations and takes a void pointer to the philosopher's index */
         phil_state[i] = THINKING;           /* Philosophers are set initially to thinking states */
+        
+        pthread_cond_init(&self[i], NULL);      /* Initializing the philosophers' condition variables */
     }
 }
 
 int request_eating(int phil_id)             /* This function returns a none zero value (grants eating request) if neither of the philosophers to the left or right of the philosopher at index phil_id are eating, and if neither of them is hungry and has been blocked for a longer time than the philosopher at index phil_id (more than the max_block time) */
 {
-    if (phil_state[(phil_id + 1) % 5] == EATING || phil_state[(phil_id + 4) % 5] == EATING || (phil_state[(phil_id + 1) % 5] == HUNGRY && phil_block_duration[(phil_id + 1) % 5] < phil_block_duration[phil_id] && max_block <= phil_block_duration[(phil_id + 1) % 5]) || (phil_state[(phil_id + 4) % 5] == HUNGRY && phil_block_duration[(phil_id + 4) % 5] < phil_block_duration[phil_id] && max_block <= phil_block_duration[(phil_id + 4) % 5]) ) return 0;
+    if (phil_state[(phil_id + 1) % 5] == EATING || phil_state[(phil_id + 4) % 5] == EATING || (phil_state[(phil_id + 1) % 5] == HUNGRY && phil_block_duration[(phil_id + 1) % 5] > phil_block_duration[phil_id] && phil_block_duration[(phil_id + 1) % 5] > max_block) || (phil_state[(phil_id + 4) % 5] == HUNGRY && phil_block_duration[(phil_id + 4) % 5] > phil_block_duration[phil_id] && phil_block_duration[(phil_id + 4) % 5] > max_block) ) return 0;
     else return 1;
 }
 
