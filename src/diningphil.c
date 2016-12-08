@@ -5,7 +5,7 @@
  CSCE 3401 | Fall 2016
  
  Project 3: The Dining Philosophers Problem
-*/
+ */
 
 #include <pthread.h>
 #include <stdlib.h>
@@ -13,12 +13,12 @@
 #include <string.h>
 #include <unistd.h>
 
-#define max_block 10            /* Maximum tolerable block duration for a philosopher*/
+#define max_block 45            /* Maximum tolerable block duration for a philosopher*/
 
 
 enum {THINKING, HUNGRY, EATING} phil_state[5];
 
-int phil_block_duration[5] = {};
+int phil_block_duration[5];
 
 pthread_cond_t self[5];
 pthread_mutex_t mutex_forks, mutex_block;
@@ -41,12 +41,12 @@ int main (void)
     
     printf("Setting up the table and preparing the philosophers...\n");
     fflush(stdout);
-           
-    initializing_phil();        /* Initializing philosopher states and creating their threads */
-
-    sleep(30);                 /* Allowing the code to run for 30 seconds */
     
-	return 0;
+    initializing_phil();        /* Initializing philosopher states and creating their threads */
+    
+    sleep(30);                 /* Allowing the code to run for 1 minute */
+    
+    return 0;
 }
 
 
@@ -114,15 +114,23 @@ void *dining_phil(void *arg)
         sleep(temp);
         
         long hunger_init_time= time(0);
-
-        pickup_forks(phil_id);
         
         pthread_mutex_lock(&mutex_block);
-
+        
+        phil_block_duration[phil_id] = 0;
+        
+        pthread_mutex_unlock(&mutex_block);
+        
+        
+        pickup_forks(phil_id);
+        
+        
+        pthread_mutex_lock(&mutex_block);
+        
         phil_block_duration[phil_id] += time(0) - hunger_init_time;
         
         pthread_mutex_unlock(&mutex_block);
-
+        
         temp = (random() % 3) + 1;
         
         printf("Philosopher no. %d is eating for %d seconds\n", phil_id + 1, temp);

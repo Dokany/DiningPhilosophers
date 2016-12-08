@@ -1,0 +1,90 @@
+Setting up the table and preparing the philosophers...
+Philosopher no. 1 is thinking for 1 seconds
+Philosopher no. 2 is thinking for 2 seconds
+Philosopher no. 4 is thinking for 3 seconds
+Philosopher no. 5 is thinking for 1 seconds
+Philosopher no. 5 is thinking for 3 seconds
+Philosopher no. 1 is eating for 3 seconds
+Philosopher no. 4 is eating for 2 seconds
+Philosopher no. 1 has finished eating
+Philosopher no. 1 is thinking for 1 seconds
+Philosopher no. 2 is eating for 1 seconds
+Philosopher no. 4 has finished eating
+Philosopher no. 4 is thinking for 1 seconds
+Philosopher no. 5 is eating for 2 seconds
+Philosopher no. 5 is eating for 2 seconds
+Philosopher no. 2 has finished eating
+Philosopher no. 2 is thinking for 2 seconds
+Philosopher no. 5 has finished eating
+Philosopher no. 5 is thinking for 3 seconds
+Philosopher no. 4 is eating for 3 seconds
+Philosopher no. 5 has finished eating
+Philosopher no. 1 is eating for 3 seconds
+Philosopher no. 5 is thinking for 3 seconds
+Philosopher no. 1 has finished eating
+Philosopher no. 1 is thinking for 1 seconds
+Philosopher no. 2 is eating for 1 seconds
+Philosopher no. 4 has finished eating
+Philosopher no. 4 is thinking for 2 seconds
+Philosopher no. 5 is eating for 1 seconds
+Philosopher no. 5 is eating for 3 seconds
+Philosopher no. 2 has finished eating
+Philosopher no. 2 is thinking for 3 seconds
+Philosopher no. 5 has finished eating
+Philosopher no. 5 is thinking for 3 seconds
+Philosopher no. 1 is eating for 3 seconds
+Philosopher no. 4 is eating for 1 seconds
+Philosopher no. 5 has finished eating
+Philosopher no. 4 has finished eating
+Philosopher no. 5 is thinking for 3 seconds
+Philosopher no. 4 is thinking for 3 seconds
+Philosopher no. 1 has finished eating
+Philosopher no. 1 is thinking for 2 seconds
+Philosopher no. 2 is eating for 2 seconds
+Philosopher no. 5 is eating for 2 seconds
+Philosopher no. 5 is eating for 3 seconds
+Philosopher no. 4 is eating for 3 seconds
+Philosopher no. 2 has finished eating
+Philosopher no. 5 has finished eating
+Philosopher no. 2 is thinking for 1 seconds
+Philosopher no. 5 is thinking for 2 seconds
+Philosopher no. 1 is eating for 2 seconds
+Philosopher no. 1 has finished eating
+Philosopher no. 1 is thinking for 1 seconds
+Philosopher no. 2 is eating for 3 seconds
+Philosopher no. 5 has finished eating
+Philosopher no. 5 is thinking for 1 seconds
+Philosopher no. 4 has finished eating
+Philosopher no. 4 is thinking for 2 seconds
+Philosopher no. 5 is eating for 1 seconds
+Philosopher no. 5 has finished eating
+Philosopher no. 5 is eating for 3 seconds
+Philosopher no. 5 is thinking for 2 seconds
+Philosopher no. 2 has finished eating
+Philosopher no. 4 is eating for 2 seconds
+Philosopher no. 2 is thinking for 1 seconds
+Philosopher no. 1 is eating for 2 seconds
+Philosopher no. 4 has finished eating
+Philosopher no. 4 is thinking for 2 seconds
+Philosopher no. 1 has finished eating
+Philosopher no. 1 is thinking for 1 seconds
+Philosopher no. 2 is eating for 1 seconds
+Philosopher no. 5 is eating for 1 seconds
+Philosopher no. 5 has finished eating
+Philosopher no. 5 is thinking for 2 seconds
+Philosopher no. 2 has finished eating
+Philosopher no. 2 is thinking for 1 seconds
+Philosopher no. 1 is eating for 1 seconds
+Philosopher no. 5 has finished eating
+Philosopher no. 5 is thinking for 3 seconds
+Philosopher no. 4 is eating for 2 seconds
+Philosopher no. 1 has finished eating
+Philosopher no. 1 is thinking for 3 seconds
+Philosopher no. 2 is eating for 2 seconds
+Philosopher no. 4 has finished eating
+Philosopher no. 4 is thinking for 1 seconds
+Philosopher no. 5 is eating for 3 seconds
+Philosopher no. 5 is eating for 3 seconds
+Philosopher no. 2 has finished eating
+Philosopher no. 2 is thinking for 1 seconds
+Philosopher no. 2 is eating for 3 seconds

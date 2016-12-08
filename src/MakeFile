@@ -1,8 +1,11 @@
-obj-m += diningphil.o
+all: diningphil
 
-all:
-	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) modules
+diningphil.o: diningphil.c
+	gcc -g -Wall -c diningphil.c
+
+diningphil: diningphil.o
+	gcc -g diningphil.o -o diningphil
 
 clean:
-	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) clean
+	/bin/rm -f diningphil diningphil.o
 
