@@ -1,4 +1,6 @@
-#*To run the code:*  
+## To run the code:  
 
+```
 $ cd src  
-$ ./diningphil  
+$ ./diningphil
+```
